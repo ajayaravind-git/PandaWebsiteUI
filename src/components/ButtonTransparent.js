@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ButtonTransparent = ({ buttonText, onClick }) => {
+const ButtonTransparent = ({ buttonText, destination }) => {
     const buttonStyle = {
         marginTop: '10px',
         padding: '10px 45px',
@@ -11,9 +12,11 @@ const ButtonTransparent = ({ buttonText, onClick }) => {
     };
 
     return (
-        <button style={buttonStyle} onClick={onClick}>
-            {buttonText}
-        </button>
+        <Link to={destination}>
+            <button style={buttonStyle} >
+                {buttonText}
+            </button>
+        </Link>
     );
 };
 

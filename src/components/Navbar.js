@@ -1,6 +1,6 @@
 // Navbar.js
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -15,16 +15,15 @@ const Navbar = () => {
 
                 {/* Navbar options */}
                 <div className="hidden md:flex space-x-10 order-1">
-                    <a href="/" className="text-black text-sm hover:underline">Home</a>
-                    <a href="/about" className="text-black text-sm hover:underline">About</a>
-                    <a href="/services" className="text-black text-sm hover:underline">Services</a>
-                    <a href="/portfolio" className="text-black text-sm hover:underline">Portfolio</a>
-                    <a href="/contact" className="text-black text-sm hover:underline">Contact</a>
-                    <a href="/blog" className="text-black text-sm hover:underline">Blog</a>
-                    <a href="/faq" className="text-black text-sm hover:underline">FAQ</a>
-                    <a href="/login" className="text-black text-sm hover:underline">Login</a>
+                    <Link to="/" className="text-black text-sm hover:underline">Home</Link>
+                    <Link to="/about" className="text-black text-sm hover:underline">About</Link>
+                    <Link to="/services" className="text-black text-sm hover:underline">Services</Link>
+                    <Link to="/portfolio" className="text-black text-sm hover:underline">Portfolio</Link>
+                    <Link to="/contact" className="text-black text-sm hover:underline">Contact</Link>
+                    <Link to="/blog" className="text-black text-sm hover:underline">Blog</Link>
+                    <Link to="/faq" className="text-black text-sm hover:underline">FAQ</Link>
+                    <Link to="/login" className="text-black text-sm hover:underline">Login</Link>
                 </div>
-
 
                 {/* Mobile navigation */}
                 <div className="md:hidden order-2 ml-auto">
@@ -39,16 +38,15 @@ const Navbar = () => {
                     {/* Mobile navigation links */}
                     {mobileNavOpen && (
                         <div className="mt-2">
-                            <a href="/" className="block text-black text-sm hover:underline">Home</a>
-                            <a href="/about" className="block text-black text-sm hover:underline">About</a>
-                            <a href="/services" className="block text-black text-sm hover:underline">Services</a>
-                            <a href="/portfolio" className="block text-black text-sm hover:underline">Portfolio</a>
-                            <a href="/contact" className="block text-black text-sm hover:underline">Contact</a>
-                            <a href="/blog" className="block text-black text-sm hover:underline">Blog</a>
-                            <a href="/faq" className="block text-black text-sm hover:underline">FAQ</a>
-                            <a href="/login" className="block text-black text-sm hover:underline">Login</a>
+                            <Link to="/" className="block text-black text-sm hover:underline">Home</Link>
+                            <Link to="/about" className="block text-black text-sm hover:underline">About</Link>
+                            <Link to="/services" className="block text-black text-sm hover:underline">Services</Link>
+                            <Link to="/portfolio" className="block text-black text-sm hover:underline">Portfolio</Link>
+                            <Link to="/contact" className="block text-black text-sm hover:underline">Contact</Link>
+                            <Link to="/blog" className="block text-black text-sm hover:underline">Blog</Link>
+                            <Link to="/faq" className="block text-black text-sm hover:underline">FAQ</Link>
+                            <Link to="/login" className="block text-black text-sm hover:underline">Login</Link>
                         </div>
-
                     )}
                 </div>
 
