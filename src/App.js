@@ -1,5 +1,8 @@
+import ButtonTransparent from "./components/ButtonTransparent.js";
 import DomeStyledImage from "./components/DomeStyledImage.js";
+import Footer from "./components/Footer.js";
 import InvertedPartialDome from "./components/InvertedPartialDome.js";
+import MapElement from "./components/MapElement.js";
 import Navbar from "./components/Navbar.js";
 import PartialDome from "./components/PartialDome.js";
 import TransparentFullDome from "./components/TransparentFullDome.js";
@@ -61,7 +64,7 @@ function App() {
 
 
     return (
-        <div className="grid grid-cols-4 s gap-1">
+        <div className="grid grid-cols-4  gap-1">
 
 
             <div className="col-span-1" >
@@ -82,14 +85,14 @@ function App() {
                 <Navbar />
             </div>
             <div className="col-span-1"></div>
-            <div className="col-span-2 text-4xl font-medium" >
-                <p style={{ fontFamily: 'Poppins' }}>We bring together experts from around the world and organizations in Africa</p>
+            <div className="col-span-2 text-5xl font-medium" >
+                <p style={{ fontFamily: 'Poppins' }}>We bring together experts from around the world.</p>
             </div>
 
             <div className="col-span-1"></div>
 
             <div className="col-span-1" style={{ fontFamily: 'Poppins' }}>
-                <h1 className="font-medium text-left text-xl text-red-700" >Organisations of Africa</h1>
+                <h1 className="font-medium text-left text-2xl text-red-700" >Organisations of Africa</h1>
                 <p className="text-left text-sm">Africa hosts a multitude of organizations, including the African Union (AU) for continental cooperation. Non-profits like the African Development Foundation focus on sustainable development, while multinational corporations contribute to economic growth. These entities collectively address diverse challenges and opportunities in the region.
                 </p>
             </div>
@@ -99,16 +102,16 @@ function App() {
             </div>
 
             <div className="col-span-1" style={{ fontFamily: 'Poppins' }} >
-                <h1 className="font-medium text-left text-xl text-red-700">Experts</h1>
+                <h1 className="font-medium text-left text-2xl text-red-700">Experts</h1>
                 <p className="text-left text-sm">Experts within African organizations, notably in institutions like the African Union (AU), are instrumental in steering the continent's development. Professionals in non-profit organizations, exemplified by the African Development Foundation, specialize in promoting sustainable development.
                 </p>
             </div>
 
             <div className="col-span-4 flex flex-start">
-                <h1 className="text-3xl font-medium" style={{ fontFamily: 'Poppins' }}>Missions de PANDA</h1>
+                <h1 className="text-4xl font-medium" style={{ fontFamily: 'Poppins' }}>Missions de PANDA</h1>
             </div>
 
-            <div className="col-span-4 flex flex-row gap-3">
+            <div className="col-span-4 flex flex-row gap-6">
                 {missions.map((mission) => (
                     <TransparentFullDome key={mission.number}
                         number={`0${mission.number}`.padStart(2, '0')} task={mission.task} description={mission.description} />
@@ -116,7 +119,7 @@ function App() {
 
             </div>
             <div className="col-span-4 flex flex-start">
-                <h1 className="text-3xl font-medium" style={{ fontFamily: 'Poppins' }}>Functionalities</h1>
+                <h1 className="text-4xl font-medium" style={{ fontFamily: 'Poppins' }}>Functionalities</h1>
             </div>
 
             <div className="col-span-2 gap-4 flex flex-wrap flex-row">
@@ -130,7 +133,29 @@ function App() {
 
             </div>
 
+            <div className="col-span-2 flex flex-col items-center ">
+                <MapElement />
+                <ButtonTransparent buttonText={'Explore Travel Map'} />
+            </div>
 
+            <div className="col-span-4 items-center ">
+                <hr></hr>
+                <h1 className="mt-20 mb-10 text-4xl font-medium">Join our community and<br /> help us
+                    build the first networking  platform
+                    <br /> online for the African market!</h1>
+                <ButtonTransparent buttonText={'Create'} /> <ButtonTransparent buttonText={'Log In   '} />
+            </div>
+
+
+            <div className="col-span-4">
+                <hr className="mb-4"></hr>
+                <Footer />
+            </div>
+
+            <div className="col-span-4 items-center text-xs">
+                <p> &#169; 2023 All rights reserved</p>
+
+            </div>
 
 
         </div>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const TransparentFullDome = ({ number, task, description }) => {
     const rectangleStyle = {
-        width: '200px', // Adjust the width as needed
-        height: '200px', // Adjust the height as needed
+        width: '300px', // Adjust the width as needed
+        height: '300px', // Adjust the height as needed
         background: 'transparent',
         border: '1.1px solid black',
         borderTopLeftRadius: '40%',

@@ -2,8 +2,8 @@ import React from 'react';
 
 const PartialDome = ({ number, task, description }) => {
     const rectangleStyle = {
-        width: '150px', // Adjust the width as needed
-        height: '160px', // Adjust the height as needed
+        width: '170px', // Adjust the width as needed
+        height: '180px', // Adjust the height as needed
         background: 'transparent',
         borderTop: '1.3px solid black',
         outline: '1.1px solid lightgrey',
