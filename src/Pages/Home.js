@@ -7,6 +7,7 @@ import MapElement from "../components/MapElement.js";
 import Navbar from "../components/Navbar.js";
 import PartialDome from "../components/PartialDome.js";
 import TransparentFullDome from "../components/TransparentFullDome.js";
+import './Home.css'
 
 
 
@@ -68,62 +69,62 @@ function Home() {
         <div className="grid grid-cols-4  gap-1">
 
 
-            <div className="col-span-1" >
+            <div className="col-span-1 home" >
                 <button className="mr-4">EN-FR</button>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 home">
                 <h1 style={{ fontFamily: 'Roboto' }} className="text-2xl ml-8 font-medium">
                     Bienvenue <br className="md:hidden" />Sur Panda
                 </h1>
             </div>
-            <div className="col-span-1 md:flex hidden">
+            <div className="col-span-1 md:flex hidden home">
                 <Link to={'/register'} className="hover:underline">Create Account</Link>
                 <Link to={'/login'} className="ml-4 hover:underline">Log In</Link>
             </div>
 
 
-            <div className="col-span-4 flex justify-center">
+            <div className="col-span-4 flex justify-center home">
                 <Navbar />
             </div>
-            <div className="col-span-1"></div>
-            <div className="col-span-2 text-5xl font-medium" >
+            <div className="col-span-1 home"></div>
+            <div className="col-span-2 text-5xl font-medium home" >
                 <p style={{ fontFamily: 'Poppins' }}>We bring together experts from around the world.</p>
             </div>
 
-            <div className="col-span-1"></div>
+            <div className="col-span-1 home"></div>
 
-            <div className="col-span-1" style={{ fontFamily: 'Poppins' }}>
+            <div className="col-span-1 home" style={{ fontFamily: 'Poppins' }}>
                 <h1 className="font-medium text-left text-2xl text-red-700" >Organisations of Africa</h1>
                 <p className="text-left text-sm">Africa hosts a multitude of organizations, including the African Union (AU) for continental cooperation. Non-profits like the African Development Foundation focus on sustainable development, while multinational corporations contribute to economic growth. These entities collectively address diverse challenges and opportunities in the region.
                 </p>
             </div>
 
-            <div className="col-span-2 flex justify-center">
+            <div className="col-span-2 flex justify-center home">
                 <DomeStyledImage />
             </div>
 
-            <div className="col-span-1" style={{ fontFamily: 'Poppins' }} >
+            <div className="col-span-1 home" style={{ fontFamily: 'Poppins' }} >
                 <h1 className="font-medium text-left text-2xl text-red-700">Experts</h1>
                 <p className="text-left text-sm">Experts within African organizations, notably in institutions like the African Union (AU), are instrumental in steering the continent's development. Professionals in non-profit organizations, exemplified by the African Development Foundation, specialize in promoting sustainable development.
                 </p>
             </div>
 
-            <div className="col-span-4 flex flex-start">
+            <div className="col-span-4 flex flex-start home">
                 <h1 className="text-4xl font-medium" style={{ fontFamily: 'Poppins' }}>Missions de PANDA</h1>
             </div>
 
-            <div className="col-span-4 flex flex-row gap-6">
+            <div className="col-span-4 flex flex-row gap-6 home">
                 {missions.map((mission) => (
                     <TransparentFullDome key={mission.number}
                         number={`0${mission.number}`.padStart(2, '0')} task={mission.task} description={mission.description} />
                 ))}
 
             </div>
-            <div className="col-span-4 flex flex-start">
+            <div className="col-span-4 flex flex-start home">
                 <h1 className="text-4xl font-medium" style={{ fontFamily: 'Poppins' }}>Functionalities</h1>
             </div>
 
-            <div className="col-span-2 gap-4 flex flex-wrap flex-row">
+            <div className="col-span-2 gap-4 flex flex-wrap flex-row home">
 
                 {functiones.slice(0, 3).map((item, index) => (
                     <PartialDome key={index} task={item.func} description={item.desc} />
@@ -134,12 +135,12 @@ function Home() {
 
             </div>
 
-            <div className="col-span-2 flex flex-col items-center ">
+            <div className="col-span-2 flex flex-col items-center home">
                 <MapElement />
                 <ButtonTransparent buttonText={'Explore Travel Map'} />
             </div>
 
-            <div className="col-span-4 items-center ">
+            <div className="col-span-4 items-center home ">
                 <hr></hr>
                 <h1 className="mt-20 mb-10 text-4xl font-medium">Join our community and<br /> help us
                     build the first networking  platform
@@ -148,12 +149,12 @@ function Home() {
             </div>
 
 
-            <div className="col-span-4">
+            <div className="col-span-4 home">
                 <hr className="mb-4"></hr>
                 <Footer />
             </div>
 
-            <div className="col-span-4 items-center text-xs">
+            <div className="col-span-4 items-center text-xs home">
                 <p> &#169; 2023 All rights reserved</p>
 
             </div>

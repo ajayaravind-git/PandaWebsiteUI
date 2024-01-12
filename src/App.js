@@ -2,8 +2,8 @@ import Home from "./Pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
-import Password from "./Pages/Password";
-import ResetPassword from "./Pages/ResetPassword";
+import FPassword from "./Pages/FPassword";
+import RPassword from "./Pages/RPassword";
 
 
 function App() {
@@ -12,11 +12,10 @@ function App() {
     return (<Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/password" element={<Password />} />
-        <Route path="/resetpassword" element={<ResetPassword />} />
-
+        <Route path="/fpassword" element={<FPassword />} />
+        <Route path="/rpassword" element={<RPassword />} />
     </Routes >)
 }
 
