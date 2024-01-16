@@ -2,7 +2,7 @@
 
 ### Panda Website
 
-### Hosted on [Panda Website](https://ajayaravind-git.github.io/PandaWebsiteUI/)
+### Hosted on [Link](https://ajayaravind-git.github.io/PandaWebsiteUI/)
 
 
 # Getting Started with Create React App
